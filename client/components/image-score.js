@@ -1,18 +1,20 @@
 import React from 'react';
 
 const ImageScore = (props) => {
-//props.ups is the number of likes
-//prop.hearts is the number of favorites
-const {likes, favorites, views} = props;
-const likesPercent = `${100 * (likes/(likes + favorites))}%`;
-const favPercent = `${100 * (favorites/(likes+favorites))}%`;
+
+const {likes, favs, views} = props;
+const likesPercent = `${100 * (likes / 1000)}%`;
+const favPercent = `${100 * (favs / 1000)}%`;
 
 return (
   <div>
-    Likes & Favorites
+    Likes:
     <div className="progress">
-      <div style={{ width: likesPercent}} className="proress-bar progress-bar-striped progress-bar-success"></div>
-      <div style={{ width: favPercent}} className="proress-bar progress-bar-striped proress-bar-warning "></div>
+      <div style={{ width: likesPercent}} className="progress-bar progress-bar-info progress-bar-striped"/>
+    </div>
+    Favorites
+    <div className="progress">
+      <div style={{ width: favPercent}} className="progress-bar progress-bar-warning progress-bar-striped"/>
     </div>
   </div>
 

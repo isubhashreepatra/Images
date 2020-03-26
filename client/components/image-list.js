@@ -7,7 +7,7 @@ import ImageDetail from './image-detail';
 //Create component
 const ImageList = (props) => {
 	const RenderedImages = props.images.map(image =>
-		 <ImageDetail key={image.id} picture = {image}/>
+		 <ImageDetail key={image.id} imageFile = {image}/>
 	);
 
 	return (

@@ -1,20 +1,20 @@
 import React from 'react';
 import ImageScore from './image-score';
 
-const ImageDetail = (prop) => {
+const ImageDetail = (props) => {
 
 	return (
 		<li className="media list-group-item">
 			<div className="media-left">
-				<img src={prop.picture.previewURL} />
+				<img src={props.imageFile.largeImageURL} />
 			</div>
 			<div className="media-body">
 				<h4 className="media-heading">
-					{prop.picture.user}
+					{props.imageFile.user}
 				</h4>
-				<p>{prop.picture.tags}</p>
+				<p>{props.imageFile.tags}</p>
 			</div>
-			<ImageScore likes = {prop.picture.likes} favs = {prop.picture.favorites} views = {prop.picture.views}/>
+			<ImageScore likes = {props.imageFile.likes} favs = {props.imageFile.favorites} views = {props.imageFile.views}/>
 		</li>
 
 	);
